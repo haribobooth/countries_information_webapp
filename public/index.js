@@ -35,7 +35,8 @@ var populateList = function(countries){
 };
 
 var addCountry = function(list, country){
-  var savedPrevName = loadCountry('previous').name;
+  var savedPrev = loadCountry('previous');
+  if(savedPrev !== null){var savedPrevName = savedPrev.name;}
   var option = document.createElement('option');
   if(savedPrevName === country.name){option.selected = 'selected'};
   option.innerText = country.name;
