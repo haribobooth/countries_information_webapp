@@ -1,0 +1,68 @@
+html {
+  height: 100%
+}
+
+body {
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+  background-repeat: no-repeat;
+  background: linear-gradient(40deg, #1BBCB1, #37B9E9);
+}
+
+#content-wrapper {
+  text-align: center;
+  max-width: 500px;
+  background: linear-gradient(-40deg, #1BBCB1, #37B9E9);
+  margin: auto;
+  padding: 5px 0px 15px 0px;
+  box-shadow: 5px 5px 5px #666666;
+  animation-name: bounceIn;
+  animation-duration: 2s;
+}
+
+#content-wrapper * {
+  text-align: center;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.005);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#animated-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-image: url("map.jpg");
+  background-position: center;
+  background-size: 200%;
+  margin: auto;
+  margin-top: 75px;
+  animation-name: moveAlot;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveAlot {
+  0% {
+    transform: translate(-200%, 0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(200%, 0px) rotate(360deg);
+  }
+
+  100% {
+    transform: translate(-200%, 0px) rotate(0deg);
+  }
+}
